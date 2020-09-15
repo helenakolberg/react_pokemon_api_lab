@@ -7,7 +7,7 @@ class PokeContainer extends Component {
         super();
         this.state = {
             pokemons: [],
-            selectedPokemon: ''
+            selectedPokemon: []
         }
     }
 
@@ -26,6 +26,10 @@ class PokeContainer extends Component {
                 })
             })
             .catch(err => console.log(err));
+    }
+
+    handlePokemonSelected(pokemon) {
+        this.setState({ selectedPokemon: pokemon });
     }
 
     
