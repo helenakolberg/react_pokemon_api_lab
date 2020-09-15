@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import PokeSelector from '../components/PokeSelector';
+import PokeDetail from '../components/PokeDetail.js';
 
 class PokeContainer extends Component {
 
     constructor() {
         super();
+
         this.state = {
             pokemons: [],
-            selectedPokemon: []
+            selectedPokemon: ''
         }
+
+        this.handlePokemonSelected = this.handlePokemonSelected.bind(this);
     }
 
     componentDidMount() {
@@ -36,8 +40,8 @@ class PokeContainer extends Component {
     render() {
         return(
             <>
-            <PokeSelector pokemons={this.state.pokemons} />
-
+            <PokeSelector pokemons={this.state.pokemons} handlePokemonSelected={this.handlePokemonSelected}/>
+            <PokeDetail pokemon={this.state.selectedPokemon} />
             </>
         )
     }

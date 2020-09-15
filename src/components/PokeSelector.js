@@ -4,11 +4,11 @@ const PokeSelector = props => {
 
     const options = props.pokemons.map((pokemon) => {
         return (
-        <option key={pokemon.name} value={pokemon}>{pokemon.name}</option>
+        <option key={pokemon.name} value={pokemon.name}>{pokemon.name}</option>
         );
     });
 
-    function handleChagne(event) {
+    function handleChange(event) {
         props.handlePokemonSelected(event.target.value);
     }
 
