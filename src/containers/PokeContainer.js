@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import PokeSelector from '../components/PokeSelector';
 
 class PokeContainer extends Component {
 
     constructor() {
         super();
         this.state = {
-            // pokemonUrls: [],
             pokemons: [],
             selectedPokemon: ''
         }
@@ -32,6 +32,7 @@ class PokeContainer extends Component {
     render() {
         return(
             <>
+            <PokeSelector pokemons={this.state.pokemons} />
 
             </>
         )
