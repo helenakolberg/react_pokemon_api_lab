@@ -5,7 +5,7 @@ const PokeDetail = (props) => {
         return null;
     }
 
-    return <h3>{props.pokemon}</h3>
+    return <h3>{props.pokemon.name}</h3>
 }
 
 export default PokeDetail;

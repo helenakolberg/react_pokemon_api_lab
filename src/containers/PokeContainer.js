@@ -38,10 +38,15 @@ class PokeContainer extends Component {
 
     
     render() {
+
+        const selectedPokemon = this.state.pokemons.find((pokemon) => {
+            return pokemon.name === this.state.selectedPokemon;
+        })
+
         return(
             <>
             <PokeSelector pokemons={this.state.pokemons} handlePokemonSelected={this.handlePokemonSelected}/>
-            <PokeDetail pokemon={this.state.selectedPokemon} />
+            <PokeDetail pokemon={selectedPokemon} />
             </>
         )
     }
